@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+    
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   /* background: #17b39e7a; */
+    /*background-image: url('img/Uber-and-Olympique-Lyonnais-1.jpg'), linear-gradient(to bottom,rgba(23, 181, 160, 0.478));*/
+    background-position: center;
+    background-size: cover;
+    background-image: url('img/Uber-and-Olympique-Lyonnais-1.jpg');
+    background-color: #17b39e7a;
+}
+
+main {
+    /*background: #17b39e7a; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;/*era 100vh, diminui o main para 50vh*/
+   /* background: #26b0a1;
+    background-image: url('img/Uber-and-Olympique-Lyonnais-1.jpg');
+    background-position: center;
+    background-size: cover;*/
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 115%;
+    object-fit: cover;
+
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgb(0, 0, 0, 4);
+    text-align: center;
+
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/*div.video {/*ajustando div da class video*/
+   /* background-color: var(--cor5); /*cor fundo video*/
+   /* margin: 0px -20px 30px -20px;/*andou sentido horario */
+   /* padding: 20px;
+    padding-bottom: 2%;
+    position: relative; /* posionamento video*/
+
+/*}*/
+
+
+/*div.video > iframe {/*gambiarra para ajustar o iframe do video*/
+   
+   /* guanabara, porem video nao tava ficando reponsivo position: absolute;
+    top:5%;/*distancia em cima do video ate o verde de fundo*
+    left:5%; /*distancia esquerda do video ate o verde de fundo*
+    width: 90%; /*ajustou o video para aumentar no fundo verde pq ta absolute*
+    height 56,25%;
+    */
+
+    /*ajustei mais responivo conforme comentarios do video*/
+   /* top:5%;
+    left:10%;
+    display: block;
+    margin: auto;
+    width: 225%;
+    height: 450px;
+    padding: 5px;
+    border-radius: 25px;    
+
+}*/
+
+footer {
+    background-color: #0a0a0aa9; 
+    color: white;
+    text-align: center; /*centralizar texto*/
+    font-size: 0.8em;
+    padding: 5px;
+    min-height:30px;
+    width: 2000px;
+
+}
+
+footer a { /*poderia ser assim footer > p > a para alterar todo link *a*  que tivesse nos paragrafos tbm */
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    text-decoration: underline; /*ação qdo passa mouse em cima*/
+    color: var(--cor1);
+}
+
+
+
+header{
+    /*vai dar cor 3 para a cor 5 ou seja do verde claro para escuro no cabeçalho superior, no topo no titulo curiosidades, tudo é bloco ou caixa*/
+    min-height:150px;
+    width: 2000px;
+    text-align:center;
+    padding-top:0px; /*deixar header colado no topo*/
+
+}
+
+header > h1{
+    
+    /*color: white;*/
+    
+    color:#17b39e7a;
+    font-family: var(--fonte-destaque);
+    font-size: 5em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px black;
+    background-color: #17b39e7a;
+}
+
+/*header> h1:hover {
+    background-color: #17b39e7a;
+    color: #17b39e7a;
+
+}*/
